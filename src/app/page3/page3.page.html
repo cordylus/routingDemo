@@ -6,10 +6,9 @@
 
 <ion-content padding>
 <p>This is page 3</p>
-<ion-button [routerLink]="['/home']">nav home</ion-button>
-<ion-button [routerLink]="['/page1']">nav page 1</ion-button>
-<ion-button [routerLink]="['/page2']">nav page 2</ion-button>
-<ion-button [routerLink]="['/page3']">nav page 3</ion-button>
-<ion-button (click)="navBack()">nav back</ion-button>
-<ion-button (click)="navForward()">nav forward</ion-button>
+<ion-button (click)="navPage('/home')">Home</ion-button>
+<ion-button (click)="navPage('/page1')">Page 1</ion-button>
+<ion-button (click)="navPage('/page2')">Page 2</ion-button>
+<ion-button (click)="navPage('/page3')">Page 3</ion-button>
+<ion-button (click)="navBack()" routerDirection="back">nav back</ion-button>
 </ion-content>

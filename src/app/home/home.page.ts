@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
 import {Location} from '@angular/common';
 
 @Component({
@@ -7,15 +8,18 @@ import {Location} from '@angular/common';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  constructor(private location: Location) {
+  constructor(
+    public navCtrl: NavController,
+    private location: Location) {
+  }
+
+
+  navPage(path:string) {
+    this.navCtrl.navigateForward(path);
   }
 
   navBack() {
-    this.location.back();
-  }
-
-  navForward() {
-    this.location.forward();
+    this.navCtrl.back();
   }
 
 }

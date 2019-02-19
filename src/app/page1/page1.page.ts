@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavController } from '@ionic/angular';
 import {Location} from '@angular/common';
 
 @Component({
@@ -8,17 +9,20 @@ import {Location} from '@angular/common';
 })
 export class Page1Page implements OnInit {
 
-  constructor(private location: Location) {
-  }
-
   ngOnInit() {
   }
 
-  navBack() {
-    this.location.back();
+  constructor(
+    public navCtrl: NavController,
+    private location: Location) {
   }
 
-  navForward() {
-    this.location.forward();
+
+  navPage(path:string) {
+    this.navCtrl.navigateForward(path);
+  }
+
+  navBack() {
+    this.navCtrl.back();
   }
 }

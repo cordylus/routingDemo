@@ -1,6 +1,8 @@
 {
   "name": "routingTest",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "bc529883"
 }
